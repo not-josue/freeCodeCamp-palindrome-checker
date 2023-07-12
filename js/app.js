@@ -12,6 +12,10 @@ input.onkeydown = (e) => {
 
 btn.onclick = () => {
   const inputValue = input.value;
+  // no input value
+  if(inputValue.length === 0) {
+    return notification.innerHTML = "No input value"
+  }
   const result = palindrome(inputValue);
   // output
   if (result) {
